@@ -23,8 +23,8 @@
       position: fixed;
       border-radius: 8px;
       text-align: center;
-      width: 65vh;
-      height: 90vh;
+      width: 65%;
+      height: 70%;
       overflow-y: auto;
       /* Enable vertical scrolling */
     }
@@ -37,7 +37,16 @@
 
 
     /* Media query for devices with width less than or equal to 600px */
+    @media only screen and (max-width: 600px) {
+      .form-group {
+        margin-bottom: 15px;
+      }
 
+      label {
+        display: block;
+        margin-bottom: 3px;
+      }
+    }
 
 
     .form-group {
@@ -62,11 +71,18 @@
       color: brown;
     }
 
+    .number-center {
+      text-align: center;
+      color: brown;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
     body {
 
       background-image: url('/static/bg.jpg');
       background-size: cover;
-      background-repeat: no-repeat;
       background-position: center;
       height: 100vh;
 
@@ -79,7 +95,7 @@
   <div class="container-fluid">
     <div class="d-flex align-items-center justify-content-center min-vh-100">
       <div class="form-container" style="background-image: url('/static/bg.jpg')">
-        <h2 class="number-center mb-4">Celiac Prediction System</h2>
+        <h2 class="number-center">Celiac Prediction System</h2>
         <form action="output">
           <div class="form-group">
             <div class="result" id="result">
